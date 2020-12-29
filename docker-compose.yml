@@ -1,0 +1,12 @@
+version: "3"
+
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  youtubedl:
+    container_name: yout
+    image: yout:0.2
+    environment:
+      LINKS: 'URL_TO_CHANNELS_OR_PLAYLISTS' #Replace it with semi colon links
+    volumes:
+      - './videos/:/videos/'
+    restart: unless-stopped
