@@ -1,5 +1,6 @@
 FROM ubuntu:20.10
 USER root
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update
 RUN apt install software-properties-common -y
 RUN apt update
