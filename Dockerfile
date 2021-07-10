@@ -17,4 +17,5 @@ RUN chmod 0644 /etc/cron.d/ytcron
 RUN chmod +x /yt_script.sh
 RUN chmod +x /entry.sh
 RUN touch /var/log/cron.log
+RUN crontab /etc/cron.d/ytcron
 ENTRYPOINT /entry.sh
