@@ -9,7 +9,7 @@ Installed docker and docker compose
 2. (Optional) Modify ytcron file if you want to change cron job time - time when yt videos will be downloaded in UTC time, by default it's set to 20:20 UTC time. 
 You can use https://crontab.guru/
 3. Run build.sh, if you have windows run command from this file.
-4. Open folder containing docker-compose.yml in command line/bash and run command ```docker-compose up -d``` You can copy docker-compose.yml to other location in new folder because in that folder there will be created folder "videos" with content of all videos and links cache.
+4. Open folder containing docker-compose.yml in command line/bash and run command ```docker compose up -d``` You can copy docker-compose.yml to other location in new folder because in that folder there will be created folder "videos" with content of all videos and links cache.
 
 ## General info
 It will not download files again if your files were downloaded

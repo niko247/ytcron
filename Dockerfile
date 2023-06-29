@@ -1,15 +1,9 @@
-FROM ubuntu:20.10
-USER root
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt update
-RUN apt install software-properties-common -y
-RUN apt update
-RUN apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget python3.9 python3-pip -y
-RUN python3 -V
-RUN pip3 install --upgrade pip
-RUN pip3 install --upgrade youtube_dl
+FROM python:3.11
 RUN apt update && apt upgrade -y
-RUN apt install cron
+RUN apt install cron -y
+RUN pip install --upgrade pip
+RUN pip install yt-dlp
+RUN which cron
 COPY ytcron /etc/cron.d/ytcron
 COPY yt_script.sh /yt_script.sh
 COPY entry.sh /entry.sh
