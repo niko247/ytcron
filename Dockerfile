@@ -1,4 +1,4 @@
-FROM python:3.12.0
+FROM python:3.12.2-slim
 RUN apt update && apt upgrade -y
 RUN apt install cron -y
 RUN pip install --upgrade pip
