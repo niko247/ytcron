@@ -2,7 +2,7 @@ FROM python:3.13-slim
 RUN apt update && apt upgrade -y
 RUN apt install cron -y
 RUN pip install --upgrade pip
-RUN pip install yt-dlp==2024.12.23
+RUN pip install yt-dlp==2025.3.26
 RUN which cron
 COPY ytcron /etc/cron.d/ytcron
 COPY yt_script.sh /yt_script.sh

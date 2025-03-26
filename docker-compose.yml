@@ -3,7 +3,7 @@ version: "3.8"
 services:
   youtubedl:
     container_name: yout
-    image: yout:0.8
+    image: yout:0.9
     environment:
       LINKS: 'URLS_OF_CHANNELS_OR_PLAYLISTS' #Replace it with links separated with semicolon
     volumes:
